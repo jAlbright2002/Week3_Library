@@ -1,9 +1,7 @@
 package ie.atu.week3_library;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
@@ -13,7 +11,7 @@ public class Book {
 
     private String title;
     private String author;
-    private int isbn;
+    private int isbn_13;
     private int publishedYear;
 
 }
