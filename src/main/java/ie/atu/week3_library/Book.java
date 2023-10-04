@@ -11,7 +11,7 @@ public class Book {
 
     private String title;
     private String author;
-    private int isbn_13;
+    private int isbn_10;
     private int publishedYear;
 
 }
