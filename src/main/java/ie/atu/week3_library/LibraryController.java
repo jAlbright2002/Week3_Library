@@ -2,10 +2,9 @@ package ie.atu.week3_library;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class LibraryController {
@@ -23,6 +22,11 @@ public class LibraryController {
     public String addBookToLibrary(@RequestBody Book book) {
         ls.addBook(book);
         return "Book added.";
+    }
+
+    @GetMapping("get")
+    public List<Book> getAllBooks() {
+        return ls.getBook();
     }
 
 
